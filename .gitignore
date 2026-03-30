@@ -1,0 +1,7 @@
+.env
+credentials.json
+node_modules/
+aria-frontend/node_modules/
+aria-admin/node_modules/
+aria-frontend/build/
+aria-admin/build/

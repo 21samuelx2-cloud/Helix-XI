@@ -1,0 +1,33 @@
+<svg width="100%" viewBox="0 0 680 370" xmlns="http://www.w3.org/2000/svg">
+<rect width="680" height="360" fill="#0a0f1a" rx="16" style="fill:rgb(10, 15, 26);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+<!-- ── ARIA LOGO ── -->
+
+<!-- Icon: signal waveform inside a circle — represents intelligence + data -->
+<g transform="translate(100, 100)" style="fill:rgb(0, 0, 0);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">
+
+  <!-- Outer circle -->
+  <circle cx="80" cy="80" r="72" fill="none" stroke="#0891b2" stroke-width="1" opacity="0.25" style="fill:none;stroke:rgb(8, 145, 178);color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.25;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+  <circle cx="80" cy="80" r="58" fill="none" stroke="#0891b2" stroke-width="0.8" opacity="0.15" style="fill:none;stroke:rgb(8, 145, 178);color:rgb(255, 255, 255);stroke-width:0.8px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.15;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- Clean A letterform — geometric, sharp -->
+  <path d="M80 24 L110 120 M80 24 L50 120 M58 88 L102 88" fill="none" stroke="#0891b2" stroke-width="7" stroke-linecap="square" stroke-linejoin="miter" style="fill:none;stroke:rgb(8, 145, 178);color:rgb(255, 255, 255);stroke-width:7px;stroke-linecap:square;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- Dot accent top -->
+  <circle cx="80" cy="18" r="4" fill="#0891b2" style="fill:rgb(8, 145, 178);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+</g>
+
+<!-- Wordmark -->
+<text x="308" y="148" text-anchor="start" font-family="Inter, sans-serif" font-size="52" font-weight="800" fill="#f1f5f9" letter-spacing="10" style="fill:rgb(241, 245, 249);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:Inter, sans-serif;font-size:52px;font-weight:800;text-anchor:start;dominant-baseline:auto">ARIA</text>
+
+<!-- Subtle product line -->
+<text x="308" y="178" text-anchor="start" font-family="Inter, sans-serif" font-size="10" font-weight="400" fill="#0891b2" letter-spacing="4" style="fill:rgb(8, 145, 178);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:Inter, sans-serif;font-size:10px;font-weight:400;text-anchor:start;dominant-baseline:auto">BY HELIX XI</text>
+
+<!-- Rule -->
+<line x1="308" y1="200" x2="610" y2="200" stroke="#1e293b" stroke-width="0.8" style="fill:rgb(0, 0, 0);stroke:rgb(30, 41, 59);color:rgb(255, 255, 255);stroke-width:0.8px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+<!-- Tagline -->
+<text x="308" y="221" font-family="Inter, sans-serif" font-size="10" font-weight="400" fill="#475569" letter-spacing="3" style="fill:rgb(71, 85, 105);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:Inter, sans-serif;font-size:10px;font-weight:400;text-anchor:start;dominant-baseline:auto">REVENUE &amp; INTELLIGENCE ACCOUNTANT</text>
+
+</svg>

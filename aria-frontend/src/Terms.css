@@ -1,0 +1,171 @@
+.terms-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.terms-modal {
+  background: var(--surface);
+  border: 1px solid var(--border2);
+  border-radius: 16px;
+  width: 100%;
+  max-width: 780px;
+  max-height: 88vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 24px 80px rgba(0,0,0,0.6);
+}
+
+.terms-header {
+  padding: 18px 24px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+}
+.terms-header-left { display: flex; align-items: center; gap: 12px; }
+.terms-logo { display: flex; align-items: center; }
+.terms-company { font-size: 11px; font-weight: 800; color: var(--text); letter-spacing: 1.5px; }
+.terms-product { font-size: 10px; color: var(--muted); margin-top: 2px; }
+.terms-close {
+  background: transparent;
+  border: 1px solid var(--border2);
+  color: var(--muted);
+  width: 28px; height: 28px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 11px;
+  display: flex; align-items: center; justify-content: center;
+  transition: all 0.12s;
+}
+.terms-close:hover { border-color: var(--red); color: var(--red); }
+
+.terms-title-block {
+  padding: 20px 24px 16px;
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+}
+.terms-title { font-size: 16px; font-weight: 700; color: var(--text); margin-bottom: 10px; }
+.terms-meta { display: flex; gap: 8px; flex-wrap: wrap; }
+.terms-badge {
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--accent-g);
+  background: rgba(59,130,246,0.08);
+  border: 1px solid rgba(59,130,246,0.2);
+  padding: 2px 10px;
+  border-radius: 99px;
+}
+
+.terms-body {
+  overflow-y: auto;
+  padding: 24px;
+  flex: 1;
+}
+
+.terms-preamble {
+  background: rgba(245,158,11,0.05);
+  border: 1px solid rgba(245,158,11,0.15);
+  border-radius: 8px;
+  padding: 16px;
+  font-size: 11px;
+  color: var(--sub);
+  line-height: 1.7;
+  margin-bottom: 28px;
+}
+
+.terms-section { margin-bottom: 28px; }
+.terms-section-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+}
+.terms-section-number {
+  width: 24px; height: 24px;
+  background: rgba(59,130,246,0.1);
+  border: 1px solid rgba(59,130,246,0.2);
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--accent-g);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.terms-section-title { font-size: 13px; font-weight: 700; color: var(--text); }
+
+.terms-warning {
+  background: rgba(239,68,68,0.05);
+  border: 1px solid rgba(239,68,68,0.15);
+  border-radius: 8px;
+  padding: 14px;
+  font-size: 11px;
+  color: var(--sub);
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+
+.terms-clause {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+.terms-sub {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--muted);
+  min-width: 32px;
+  padding-top: 1px;
+  flex-shrink: 0;
+}
+.terms-text { font-size: 12px; color: var(--sub); line-height: 1.7; }
+.terms-label { color: var(--text2); font-weight: 600; }
+
+.terms-footer-block {
+  margin-top: 32px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+}
+.terms-acceptance {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text2);
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+.terms-copyright {
+  font-size: 10px;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.terms-actions {
+  padding: 16px 24px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: flex-end;
+  flex-shrink: 0;
+}
+.terms-btn-accept {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 10px 28px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.12s;
+}
+.terms-btn-accept:hover { background: var(--accent-h); }

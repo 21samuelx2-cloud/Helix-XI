@@ -1,0 +1,35 @@
+<svg width="100%" viewBox="0 0 680 370" xmlns="http://www.w3.org/2000/svg">
+<defs>
+
+</defs>
+
+<rect width="680" height="360" fill="#0a0f1a" rx="16" style="fill:rgb(10, 15, 26);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+<!-- ── HELIX XI LOGO ── -->
+
+<!-- Icon: two interleaved rectangles forming XI in a shield -->
+<g transform="translate(148, 80)" style="fill:rgb(0, 0, 0);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">
+
+  <!-- Outer shield shape -->
+  <path d="M0 0 L120 0 L120 130 L60 160 L0 130 Z" fill="none" stroke="#4f46e5" stroke-width="1.2" opacity="0.35" style="fill:none;stroke:rgb(79, 70, 229);color:rgb(255, 255, 255);stroke-width:1.2px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.35;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- Inner geometric H shape -->
+  <rect x="22" y="30" width="22" height="80" rx="3" fill="#4f46e5" style="fill:rgb(79, 70, 229);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+  <rect x="22" y="65" width="76" height="10" rx="2" fill="#4f46e5" opacity="0.6" style="fill:rgb(79, 70, 229);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.6;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+  <rect x="76" y="30" width="22" height="80" rx="3" fill="#4f46e5" style="fill:rgb(79, 70, 229);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- XI accent line -->
+  <line x1="0" y1="155" x2="120" y2="155" stroke="#4f46e5" stroke-width="1" opacity="0.4" style="fill:rgb(0, 0, 0);stroke:rgb(79, 70, 229);color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:0.4;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+</g>
+
+<!-- Wordmark -->
+<text x="308" y="148" text-anchor="start" font-family="Inter, sans-serif" font-size="42" font-weight="800" fill="#f1f5f9" letter-spacing="4" style="fill:rgb(241, 245, 249);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:Inter, sans-serif;font-size:42px;font-weight:800;text-anchor:start;dominant-baseline:auto">HELIX</text>
+<text x="308" y="197" text-anchor="start" font-family="Inter, sans-serif" font-size="20" font-weight="300" fill="#4f46e5" letter-spacing="14" style="fill:rgb(79, 70, 229);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:Inter, sans-serif;font-size:20px;font-weight:300;text-anchor:start;dominant-baseline:auto">XI</text>
+
+<!-- Rule -->
+<line x1="308" y1="215" x2="610" y2="215" stroke="#1e293b" stroke-width="0.8" style="fill:rgb(0, 0, 0);stroke:rgb(30, 41, 59);color:rgb(255, 255, 255);stroke-width:0.8px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+<!-- Tagline -->
+<text x="308" y="236" font-family="Inter, sans-serif" font-size="10" font-weight="400" fill="#475569" letter-spacing="3" style="fill:rgb(71, 85, 105);stroke:none;color:rgb(255, 255, 255);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:Inter, sans-serif;font-size:10px;font-weight:400;text-anchor:start;dominant-baseline:auto">AUTONOMOUS FINANCIAL INTELLIGENCE</text>
+
+</svg>

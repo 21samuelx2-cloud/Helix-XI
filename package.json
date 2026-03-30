@@ -1,0 +1,15 @@
+{
+  "name": "helix-xi",
+  "private": true,
+  "scripts": {
+    "dev:backend": "node server.js",
+    "dev:frontend": "npm --prefix aria-frontend start",
+    "dev:admin": "npm --prefix aria-admin start",
+    "dev": "node scripts/dev-stack.js",
+    "test:backend": "node tests/backend.test.js",
+    "seed:bulk": "node scripts/bulk-transactions.js"
+  },
+  "dependencies": {
+    "plaid": "^41.4.0"
+  }
+}
