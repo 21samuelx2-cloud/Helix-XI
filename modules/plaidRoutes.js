@@ -4,7 +4,7 @@
 
 const { plaidClient } = require('./plaidClient');
 const { CountryCode, Products } = require('plaid');
-const { syncPlaidTransactions } = require('./plaidSync');
+const { syncPlaidItem } = require('./plaidSync');
 const { isVaultConfigured, encryptSecret, decryptSecret } = require('./secretVault');
 
 async function registerPlaidRoutes(app, deps) {
@@ -119,7 +119,7 @@ async function registerPlaidRoutes(app, deps) {
         // Fetch the encrypted access token from Supabase
         const { data, error } = await sb
           .from('helixxi_plaid_items')
-          .select('access_token_ciphertext')
+          .select('*')
           .eq('company_id', companyId)
           .single();
 
@@ -127,9 +127,16 @@ async function registerPlaidRoutes(app, deps) {
           return res.status(404).json({ error: 'No Plaid connection found for this company' });
         }
 
-        // Decrypt and sync
-        const accessToken = decryptSecret(data.access_token_ciphertext);
-        const result = await syncPlaidTransactions(companyId, accessToken, sb);
+        const result = await syncPlaidItem({
+          sb,
+          item: data,
+          decryptSecret,
+          force: Boolean(req.body?.force),
+        });
+
+        if (result.cooldown) {
+          return res.status(429).json({ error: 'Sync cooldown active', retry_at: result.retryAt });
+        }
 
         return res.json({ success: true, synced: result.synced });
       } catch (error) {

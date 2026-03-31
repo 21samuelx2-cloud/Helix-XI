@@ -194,6 +194,7 @@ function registerIntegrationRoutes(app, deps) {
         ip: getClientIp(req),
         countEvent: false,
         touchLastWebhookAt: false,
+        clearFailure: true,
         boost: 4,
         integrationStatus: 'connected',
       });
@@ -240,6 +241,7 @@ function registerIntegrationRoutes(app, deps) {
         ip: getClientIp(req),
         countEvent: false,
         touchLastWebhookAt: false,
+        clearFailure: true,
         boost: 3,
         integrationStatus: 'connected',
       });
@@ -399,6 +401,7 @@ function registerIntegrationRoutes(app, deps) {
           ip: inboundIp,
           duplicate: true,
           countEvent: false,
+          clearFailure: true,
           integrationStatus: 'connected',
         });
         return res.json({ received: true, processed: false, duplicate: true, reason: 'Duplicate inbound event' });
@@ -415,6 +418,7 @@ function registerIntegrationRoutes(app, deps) {
         provider: authMode,
         ip: inboundIp,
         missingIdempotencyKey: !idempotencyKey,
+        clearFailure: true,
         boost: authMode === 'signed_backend' ? (idempotencyKey ? 12 : 9) : (idempotencyKey ? 8 : 5),
         integrationStatus: 'connected',
         touchLastWebhookAt: true,
@@ -466,6 +470,7 @@ function registerIntegrationRoutes(app, deps) {
         ip: getClientIp(req),
         isTest: true,
         countEvent: false,
+        clearFailure: true,
         boost: 6,
         integrationStatus: 'connected',
         touchLastWebhookAt: false,
@@ -650,6 +655,7 @@ function registerIntegrationRoutes(app, deps) {
           ip: inboundIp,
           duplicate: true,
           countEvent: false,
+          clearFailure: true,
           integrationStatus: 'connected',
         });
         return res.json({ received: true, processed: false, duplicate: true, reason: 'Duplicate inbound event' });
@@ -662,6 +668,7 @@ function registerIntegrationRoutes(app, deps) {
         detail: `Provider webhook verified and accepted from ${processor}.`,
         provider: processor,
         ip: inboundIp,
+        clearFailure: true,
         boost: 9,
         integrationStatus: 'connected',
         touchLastWebhookAt: true,

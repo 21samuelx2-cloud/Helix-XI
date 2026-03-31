@@ -26,6 +26,7 @@ const { buildFinanceIntelligence, getOnboardingContext, registerDashboardRoutes 
 const { registerFinanceOpsRoutes } = require('./modules/financeOpsRoutes');
 const { registerIntegrationRoutes } = require('./modules/integrationRoutes');
 const { registerPlaidRoutes } = require('./modules/plaidRoutes');
+const { runPlaidAutoRetry } = require('./modules/plaidSync');
 const {
   authCookieOptions,
   csrfCookieOptions,
@@ -181,7 +182,9 @@ registerAuthAdminRoutes(app, {
   getCompanies,
   getHoldQueue,
   getLedger,
+  getTransactions,
   getUsers,
+  ingestTransaction,
   issueCsrfToken,
   issueStepUpToken,
   jwtAuth,
@@ -371,6 +374,16 @@ cron.schedule('0 */6 * * *', async () => {
 // FX rate refresh every 4 hours
 cron.schedule('0 */4 * * *', async () => {
   try { await refreshFXRates(); } catch (err) { console.error('FX refresh error:', err.message); }
+}, { scheduled: true, timezone: 'UTC' });
+
+// Plaid sync auto-retry with cooldown
+cron.schedule(process.env.PLAID_SYNC_CRON || '*/10 * * * *', async () => {
+  if (!isVaultConfigured()) return;
+  try {
+    await runPlaidAutoRetry({ sb, decryptSecret, maxItems: 5 });
+  } catch (err) {
+    console.error('Plaid auto-retry error:', err.message);
+  }
 }, { scheduled: true, timezone: 'UTC' });
 
 // Baseline recalculation every Monday at 7am

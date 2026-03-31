@@ -159,7 +159,9 @@ function registerAuthAdminRoutes(app, deps) {
     getCompanies,
     getHoldQueue,
     getLedger,
+    getTransactions,
     getUsers,
+    ingestTransaction,
     issueCsrfToken,
     issueStepUpToken,
     jwtAuth,
@@ -519,6 +521,60 @@ function registerAuthAdminRoutes(app, deps) {
       }, companyId).catch(() => {});
 
       res.json({ success: true, quarantined: false });
+    } catch (err) {
+      res.status(500).json({ error: err.message });
+    }
+  });
+
+  app.post('/admin/integration-events/:companyId/clear-failures', jwtAuth, requirePermission('admin.users.update'), csrfGuard, requireRecentStepUp, async (req, res) => {
+    try {
+      const companyId = req.params.companyId;
+      const reason = String(req.body?.reason || '').trim() || 'Failures cleared by ARIA operator.';
+      const patch = {
+        integration_failures_24h: 0,
+        integration_status: 'connected',
+      };
+      const { error } = await sb.from('helixxi_companies').update(patch).eq('id', companyId);
+      if (error) throw error;
+
+      await appendToAuditLog({
+        companyId,
+        timestamp: new Date().toISOString(),
+        action: 'INTEGRATION_CLEAR_FAILURES',
+        details: `Integration failures cleared by admin ${req.user.userId}. ${reason}`,
+        layer: 'SECURITY',
+        status: 'RESTORED',
+      }, companyId).catch(() => {});
+
+      res.json({ success: true, cleared: true });
+    } catch (err) {
+      res.status(500).json({ error: err.message });
+    }
+  });
+
+  app.post('/admin/integration-events/:companyId/backfill', jwtAuth, requirePermission('admin.users.update'), csrfGuard, requireRecentStepUp, async (req, res) => {
+    try {
+      const companyId = req.params.companyId;
+      const pending = await getTransactions(companyId);
+      let processed = 0;
+      let failed = 0;
+
+      for (const tx of pending) {
+        const result = await ingestTransaction(tx, companyId);
+        if (result?.success) processed += 1;
+        else failed += 1;
+      }
+
+      await appendToAuditLog({
+        companyId,
+        timestamp: new Date().toISOString(),
+        action: 'INTEGRATION_BACKFILL',
+        details: `Admin backfill executed. processed=${processed} failed=${failed}`,
+        layer: 'SECURITY',
+        status: failed > 0 ? 'WARN' : 'OK',
+      }, companyId).catch(() => {});
+
+      res.json({ success: true, processed, failed });
     } catch (err) {
       res.status(500).json({ error: err.message });
     }
