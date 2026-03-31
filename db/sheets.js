@@ -1,5 +1,4 @@
 const { google } = require('googleapis');
-require('dotenv').config();
 
 const SHEET_ID = process.env.GOOGLE_SHEET_ID;
 const GOOGLE_KEY_FILE = String(process.env.GOOGLE_KEY_FILE || '').trim();
