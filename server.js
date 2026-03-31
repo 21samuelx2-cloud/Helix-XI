@@ -1,7 +1,6 @@
 const Groq = require('groq-sdk');
 const { Resend } = require('resend');
 const { createClient } = require('@supabase/supabase-js');
-require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const cron = require('node-cron');
