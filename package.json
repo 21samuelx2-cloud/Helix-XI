@@ -2,6 +2,7 @@
   "name": "helix-xi",
   "private": true,
   "scripts": {
+    "start": "node server.js",
     "dev:backend": "node server.js",
     "dev:frontend": "npm --prefix aria-frontend start",
     "dev:admin": "npm --prefix aria-admin start",
